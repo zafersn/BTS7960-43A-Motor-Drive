@@ -24,16 +24,16 @@ void loop() {
   digitalWrite(R_EN,HIGH);
   digitalWrite(L_EN,HIGH);
 delay(1000);
-for(int i=0;i<256;i+=10){
-  analogWrite(RPWM,255);
+for(int i=0;i<256;i++){
+  analogWrite(RPWM,i);
 //  analogWrite(LPWM,255-i);
   delay(100);
 }
 delay(500);
 for(int i=255;i>0;i--){
-  analogWrite(RPWM,255);
+  analogWrite(RPWM,i);
 // analogWrite(LPWM,255-i);
-  delay(1000);
+  delay(100);
 }
 delay(500);
 Serial.println("EN LOW");
